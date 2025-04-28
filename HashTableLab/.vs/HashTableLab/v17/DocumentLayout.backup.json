@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\dokument\\gmi24h\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\linkedlisthashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\linkedlisthashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\dokument\\gmi24h\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\dokument\\gmi24h\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\ihashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\ihashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\dokument\\gmi24h\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\listhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\listhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\dokument\\gmi24h\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\arrayhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\arrayhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\dokument\\gmi24h\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 201,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LinkedListHashTable.cs",
+              "DocumentMoniker": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\LinkedListHashTable.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\LinkedListHashTable.cs",
+              "ToolTip": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\LinkedListHashTable.cs",
+              "RelativeToolTip": "HashTableLab\\LinkedListHashTable.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAADwv3wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T11:05:51.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListHashTable.cs",
+              "DocumentMoniker": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\ListHashTable.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\ListHashTable.cs",
+              "ToolTip": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\ListHashTable.cs",
+              "RelativeToolTip": "HashTableLab\\ListHashTable.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T11:06:03.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ArrayHashTable.cs",
+              "DocumentMoniker": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\ArrayHashTable.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\ArrayHashTable.cs",
+              "ToolTip": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\ArrayHashTable.cs",
+              "RelativeToolTip": "HashTableLab\\ArrayHashTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T11:06:15.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IHashTable.cs",
+              "DocumentMoniker": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\IHashTable.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\IHashTable.cs",
+              "ToolTip": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\IHashTable.cs",
+              "RelativeToolTip": "HashTableLab\\IHashTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T10:50:05.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\Student.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\Student.cs",
+              "ToolTip": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\Student.cs",
+              "RelativeToolTip": "HashTableLab\\Student.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAlwFwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T10:52:15.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\Program.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\Program.cs",
+              "ToolTip": "C:\\Dokument\\GMI24H\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\Program.cs",
+              "RelativeToolTip": "HashTableLab\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T10:45:25.644Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 666,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
