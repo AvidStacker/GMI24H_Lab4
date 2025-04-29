@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ListHashTablexUnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d260d96672b0c44e3b90956d2fd47b539439744")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+650f9da17fc9cd640b89dc95011b7dea664ef821")]
 [assembly: System.Reflection.AssemblyProductAttribute("ListHashTablexUnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ListHashTablexUnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
