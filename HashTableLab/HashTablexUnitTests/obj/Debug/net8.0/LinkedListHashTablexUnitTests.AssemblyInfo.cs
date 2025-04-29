@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinkedListHashTablexUnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4080a0c41286de641a0122be89e75eab19b5dc32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a878791cd34d92264762f082db88871252c79e02")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinkedListHashTablexUnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinkedListHashTablexUnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

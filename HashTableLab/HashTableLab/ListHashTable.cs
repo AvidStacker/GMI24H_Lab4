@@ -1,75 +1,84 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HashTableLab
+namespace HashTableLab 
 {
-    internal class ListHashTable <TKey, TValue> : IHashTable<TKey, TValue>
+    internal class ListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
-        private readonly List<KeyValuePair<TKey, TValue>>[] _buckets;
+        private readonly List<KeyValuePair<TKey, TValue>>[] buckets;
         private readonly int _size;
-        public ListHashTable(int size = 10) 
+
+        public ListHashTable(int size = 10)
         {
-            this._size = size;
-            _buckets = new List<KeyValuePair<TKey, TValue>>[_size];
+            if (size <= 0)
+                throw new ArgumentException("Size must be greater than zero.", nameof(size));
+
+            _size = size;
+            buckets = new List<KeyValuePair<TKey, TValue>>[_size];
 
             for (int i = 0; i < _size; i++)
-            {
-                _buckets[i] = new List<KeyValuePair<TKey, TValue>>();
-            }
+                buckets[i] = new List<KeyValuePair<TKey, TValue>>();
         }
 
         public int Size => _size;
 
         public void Add(TKey key, TValue value)
         {
-            var bucket = _buckets[GetBucketIndex(key)];
+            if (key == null)
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+
+            var bucket = buckets[GetBucketIndex(key)];
             if (bucket.Any(kvp => kvp.Key.Equals(key)))
-            
-                throw new ArgumentException("Key already exists in the hash table.");
-            
+                throw new ArgumentException("An element with the same key already exists.");
+
             bucket.Add(new KeyValuePair<TKey, TValue>(key, value));
         }
 
         public TValue Get(TKey key)
         {
-            var bucket = _buckets[GetBucketIndex(key)];
+            if (key == null)
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+
+            var bucket = buckets[GetBucketIndex(key)];
             foreach (var kvp in bucket)
             {
                 if (kvp.Key.Equals(key))
-                {
                     return kvp.Value;
-                }
             }
-            throw new KeyNotFoundException("Key not found in the hash table.");
+            throw new KeyNotFoundException($"Key '{key}' was not found.");
         }
 
         public void Remove(TKey key)
         {
-            var bucket = _buckets[GetBucketIndex(key)];
+            if (key == null)
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+
+            var bucket = buckets[GetBucketIndex(key)];
             var index = bucket.FindIndex(kvp => kvp.Key.Equals(key));
 
             if (index >= 0)
-            {
                 bucket.RemoveAt(index);
-            }
             else
-            {
-                throw new KeyNotFoundException("Key not found in the hash table.");
-            }
+                throw new KeyNotFoundException($"Key '{key}' was not found.");
         }
 
         public bool ContainsKey(TKey key)
         {
-            var bucket = _buckets[GetBucketIndex(key)];
+            if (key == null)
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+
+            var bucket = buckets[GetBucketIndex(key)];
             return bucket.Any(kvp => kvp.Key.Equals(key));
         }
 
         private int GetBucketIndex(TKey key)
         {
-            return Math.Abs(key.GetHashCode()) % this._size;
+            if (key == null)
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+
+            return Math.Abs(key.GetHashCode()) % _size;
         }
     }
 }
+
