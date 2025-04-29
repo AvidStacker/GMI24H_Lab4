@@ -69,7 +69,7 @@ namespace HashTableLab
 
         private int GetBucketIndex(TKey key)
         {
-            throw new NotImplementedException();
+            return Math.Abs(key.GetHashCode()) % this._size;
         }
     }
 }
