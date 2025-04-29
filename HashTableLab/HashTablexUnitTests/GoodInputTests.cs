@@ -3,77 +3,69 @@ namespace HashTablexUnitTests
     public class GoodInputTests
     {
         [Fact]
-        public void AddAndGet_ShouldReturnCorrectStudent()
+        public void Add_And_Get_Value_ShouldSucceed()
         {
-            var table = new LinkedListHashTable();
-            var student = new Student("Anna", "Smith", "h001");
-            table.Add(student.ID, student);
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            table.Add("key1", "value1");
 
-            var result = table.Get(student.ID);
+            var value = table.Get("key1");
 
-            Assert.NotNull(result);
-            Assert.Equal(student.FirstName, ((Student)result).FirstName);
+            Assert.Equal("value1", value);
         }
 
         [Fact]
-        public void Remove_ShouldDeleteStudent()
+        public void Add_SameKey_ShouldUpdateValue()
         {
-            var table = new LinkedListHashTable();
-            var student = new Student("Brian", "Johnson", "h002");
-            table.Add(student.ID, student);
-            table.Remove(student.ID);
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            table.Add("key1", "value1");
+            table.Add("key1", "newValue");
 
-            var result = table.Get(student.ID);
+            var value = table.Get("key1");
 
-            Assert.Null(result);
+            Assert.Equal("newValue", value);
         }
 
         [Fact]
-        public void Add_TwoKeysSameBucket_Chaining_ShouldStoreBoth()
+        public void Remove_Key_ShouldDeleteSuccessfully()
         {
-            var table = new LinkedListHashTable();
-            table.Add("abc", new Student("Alice", "Brown", "abc"));
-            table.Add("acb", new Student("Bob", "White", "acb")); // Kollision!
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            table.Add("key1", "value1");
+            table.Remove("key1");
 
-            Assert.NotNull(table.Get("abc"));
-            Assert.NotNull(table.Get("acb"));
+            Assert.False(table.ContainsKey("key1"));
         }
 
         [Fact]
-        public void AddManyStudents_ShouldTriggerResize_AndStillBeAccessible()
+        public void ContainsKey_ExistingKey_ShouldReturnTrue()
         {
-            var table = new ListHashTable();
-            for (int i = 0; i < 100; i++)
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            table.Add("key1", "value1");
+
+            Assert.True(table.ContainsKey("key1"));
+        }
+
+        [Fact]
+        public void ContainsKey_NonExistingKey_ShouldReturnFalse()
+        {
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+
+            Assert.False(table.ContainsKey("missing"));
+        }
+
+        [Fact]
+        public void Add_MultipleItems_ShouldTriggerRehash()
+        {
+            var table = new HashTableLab.LinkedListHashTable<int, string>(4);
+            for (int i = 0; i < 10; i++)
             {
-                table.Add("id" + i, new Student("Name" + i, "Surname", "id" + i));
+                table.Add(i, "value" + i);
             }
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
-                var result = table.Get("id" + i);
-                Assert.NotNull(result);
+                var val = table.Get(i);
+                Assert.Equal("value" + i, val);
             }
-        }
-
-        [Fact]
-        public void OpenAddressing_LinearProbing_ShouldHandleCollision()
-        {
-            var table = new LinearProbingHashTable();
-            table.Add("key1", new Student("First", "User", "key1"));
-            table.Add("key2", new Student("Second", "User", "key2")); // Samma hash?
-
-            Assert.NotNull(table.Get("key1"));
-            Assert.NotNull(table.Get("key2"));
-        }
-
-        [Fact]
-        public void HashFunction_SameKey_ShouldReturnSameHash()
-        {
-            var table = new ArrayHashTable();
-            int hash1 = table.ComputeHash("samekey");
-            int hash2 = table.ComputeHash("samekey");
-
-            Assert.Equal(hash1, hash2);
         }
     }
 }

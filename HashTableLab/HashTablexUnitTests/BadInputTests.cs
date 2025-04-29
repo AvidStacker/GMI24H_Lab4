@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HashTableLab;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,44 +10,48 @@ namespace HashTablexUnitTests
     public class BadInputTests
     {
         [Fact]
-        public void AddStudent_NoCheckIfActuallyAdded()
+        public void Get_NonExistingKey_ShouldThrowKeyNotFoundException()
         {
-            var table = new LinkedListHashTable();
-            table.Add("badkey", new Student("Bad", "Test", "badkey"));
-            // Inget assert – testet säger inget om vad som hände!
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+
+            Assert.Throws<KeyNotFoundException>(() => table.Get("nonexistent"));
         }
 
         [Fact]
-        public void RemoveStudent_ButForgetToAddFirst()
+        public void Remove_NonExistingKey_ShouldThrowKeyNotFoundException()
         {
-            var table = new LinkedListHashTable();
-            table.Remove("nonexisting");
-            // Ingen koll om något faktiskt tas bort eller om Remove kraschar.
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+
+            Assert.Throws<KeyNotFoundException>(() => table.Remove("nonexistent"));
         }
 
         [Fact]
-        public void GetStudent_WithoutAddingAnything()
+        public void Add_NullKey_ShouldThrowException()
         {
-            var table = new ListHashTable();
-            var result = table.Get("randomkey");
-            // Ingen Assert, testet testar inget.
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+
+            Assert.Throws<ArgumentNullException>(() => table.Add(null, "value"));
         }
 
         [Fact]
-        public void AddTwoStudents_WithoutTestingCollision()
+        public void ContainsKey_NullKey_ShouldThrowException()
         {
-            var table = new LinkedListHashTable();
-            table.Add("keyA", new Student("A", "Student", "keyA"));
-            table.Add("keyB", new Student("B", "Student", "keyB"));
-            // Testar inte om de hamnade i samma bucket eller inte (missar collision-test).
+            var table = new HashTableLab.LinkedListHashTable<string, string>();
+
+            Assert.Throws<ArgumentNullException>(() => table.ContainsKey(null));
         }
 
         [Fact]
-        public void JustCallComputeHash_DoNothingElse()
+        public void Add_Keys_ThatCauseCollision_ShouldHandleViaLinkedList()
         {
-            var table = new ArrayHashTable();
-            table.ComputeHash("key123");
-            // Ingen koll på om hash-värdet är korrekt.
+            var table = new HashTableLab.LinkedListHashTable<int, string>(1);
+            table.Add(1, "one");
+            table.Add(2, "two");
+            table.Add(3, "three");
+
+            Assert.Equal("one", table.Get(1));
+            Assert.Equal("two", table.Get(2));
+            Assert.Equal("three", table.Get(3));
         }
     }
 }

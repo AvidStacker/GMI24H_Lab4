@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|c:\\users\\mattr\\skola\\\u00E5rskurs 2\\gmi24h - algoritmer och mjukvarudesign\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\linkedlisthashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableLab.csproj|solutionrelative:hashtablelab\\linkedlisthashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04466307-1676-48E8-BAE4-9B8A7BA154A3}|HashTablexUnitTests\\LinkedListHashTablexUnitTests.csproj|c:\\users\\mattr\\skola\\\u00E5rskurs 2\\gmi24h - algoritmer och mjukvarudesign\\github\\gmi24h_lab4\\hashtablelab\\hashtablexunittests\\goodinputtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04466307-1676-48E8-BAE4-9B8A7BA154A3}|HashTablexUnitTests\\LinkedListHashTablexUnitTests.csproj|solutionrelative:hashtablexunittests\\goodinputtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04466307-1676-48E8-BAE4-9B8A7BA154A3}|HashTablexUnitTests\\LinkedListHashTablexUnitTests.csproj|c:\\users\\mattr\\skola\\\u00E5rskurs 2\\gmi24h - algoritmer och mjukvarudesign\\github\\gmi24h_lab4\\hashtablelab\\hashtablexunittests\\badinputtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04466307-1676-48E8-BAE4-9B8A7BA154A3}|HashTablexUnitTests\\LinkedListHashTablexUnitTests.csproj|solutionrelative:hashtablexunittests\\badinputtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FCEA245E-9574-4000-B04B-F53AFF4DBF5A}|ArrayHashTablexUnitTests\\ArrayHashTablexUnitTests.csproj|c:\\users\\mattr\\skola\\\u00E5rskurs 2\\gmi24h - algoritmer och mjukvarudesign\\github\\gmi24h_lab4\\hashtablelab\\arrayhashtablexunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCEA245E-9574-4000-B04B-F53AFF4DBF5A}|ArrayHashTablexUnitTests\\ArrayHashTablexUnitTests.csproj|solutionrelative:arrayhashtablexunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,19 +34,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GoodInputsTests.cs",
-              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\GoodInputsTests.cs",
-              "RelativeDocumentMoniker": "ArrayHashTablexUnitTests\\GoodInputsTests.cs",
-              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\GoodInputsTests.cs",
-              "RelativeToolTip": "ArrayHashTablexUnitTests\\GoodInputsTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GoodInputTests.cs",
+              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTablexUnitTests\\GoodInputTests.cs",
+              "RelativeDocumentMoniker": "HashTablexUnitTests\\GoodInputTests.cs",
+              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTablexUnitTests\\GoodInputTests.cs",
+              "RelativeToolTip": "HashTablexUnitTests\\GoodInputTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:26:51.644Z",
+              "WhenOpened": "2025-04-29T11:54:45.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BadInputTests.cs",
+              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTablexUnitTests\\BadInputTests.cs",
+              "RelativeDocumentMoniker": "HashTablexUnitTests\\BadInputTests.cs",
+              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTablexUnitTests\\BadInputTests.cs",
+              "RelativeToolTip": "HashTablexUnitTests\\BadInputTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:48:00.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LinkedListHashTable.cs",
+              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\LinkedListHashTable.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\LinkedListHashTable.cs",
+              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\LinkedListHashTable.cs",
+              "RelativeToolTip": "HashTableLab\\LinkedListHashTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:47:50.441Z",
               "EditorCaption": ""
             },
             {
@@ -67,7 +105,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "GoodInputsTests.cs",
+              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\GoodInputsTests.cs",
+              "RelativeDocumentMoniker": "ArrayHashTablexUnitTests\\GoodInputsTests.cs",
+              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\GoodInputsTests.cs",
+              "RelativeToolTip": "ArrayHashTablexUnitTests\\GoodInputsTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:26:51.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BadInputsTests.cs",
               "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\BadInputsTests.cs",
               "RelativeDocumentMoniker": "ArrayHashTablexUnitTests\\BadInputsTests.cs",
@@ -75,12 +126,11 @@
               "RelativeToolTip": "ArrayHashTablexUnitTests\\BadInputsTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:27:00.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T11:27:00.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ArrayHashTable.cs",
               "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\ArrayHashTable.cs",
               "RelativeDocumentMoniker": "HashTableLab\\ArrayHashTable.cs",
@@ -88,8 +138,7 @@
               "RelativeToolTip": "HashTableLab\\ArrayHashTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:28:48.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T10:28:48.688Z"
             }
           ]
         },

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HashTableLab
 {
-    internal class LinkedListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
+    public class LinkedListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
 
         private static readonly double DEFAULT_LOAD_FACTOR = 0.75;
@@ -40,39 +40,48 @@ namespace HashTableLab
         // Add a key-value pair to the hash table
         public void Add(TKey key, TValue value)
         {
+            if (key == null)
+            {
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+            }
 
             if (this.GetCount() >= this.GetSize() * DEFAULT_LOAD_FACTOR)
             {
                 this.Rehash(key, value);
+                return;
             }
 
             int index = this.GetBucketIndex(key);
             Node newNode = new Node(key, value);
 
-            // If no item exists at this index, place the new node here
             if (this._buckets[index] == null)
             {
                 this._buckets[index] = newNode;
             }
             else
             {
-                // Collision occurs, so we need to add the new node to the linked list
                 Node current = this._buckets[index];
+
+                if (EqualityComparer<TKey>.Default.Equals(current.Key, key))
+                {
+                    current.Value = value;
+                    return;
+                }
+
                 while (current.Next != null)
                 {
-                    // If the key already exists, update the value
+                    current = current.Next;
                     if (EqualityComparer<TKey>.Default.Equals(current.Key, key))
                     {
                         current.Value = value;
                         return;
                     }
-                    current = current.Next;
                 }
 
-                // Add the new node at the end of the linked list
                 current.Next = newNode;
             }
         }
+
 
         private void Rehash(TKey? key, TValue? value)
         {
@@ -126,6 +135,11 @@ namespace HashTableLab
         // Retrieve the value associated with a given key
         public TValue Get(TKey key)
         {
+            if (key == null)
+            {
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+            }
+
             int index = this.GetBucketIndex(key);
             Node current = this._buckets[index];
 
@@ -144,6 +158,11 @@ namespace HashTableLab
         // Remove a key-value pair from the hash table
         public void Remove(TKey key)
         {
+            if (key == null)
+            {
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+            }
+
             int index = this.GetBucketIndex(key);
             Node current = this._buckets[index];
             Node previous = null;
@@ -174,6 +193,11 @@ namespace HashTableLab
         // Check if a key exists in the hash table
         public bool ContainsKey(TKey key)
         {
+            if (key == null)
+            {
+                throw new ArgumentNullException(nameof(key), "Key cannot be null.");
+            }
+
             int index = this.GetBucketIndex(key);
             Node current = this._buckets[index];
 
