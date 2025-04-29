@@ -197,7 +197,6 @@ namespace HashTableLab
 
         public int GetSize() { return this._size; }
 
-
         public int GetCount()
         {
             int count = 0;

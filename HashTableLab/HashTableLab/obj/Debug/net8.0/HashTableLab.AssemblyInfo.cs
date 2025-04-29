@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HashTableLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b49d9c3a62589e2a09330852343b499d36e24a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c09a4db319e9e3564810ae1ce7bc1b10042f899")]
 [assembly: System.Reflection.AssemblyProductAttribute("HashTableLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HashTableLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

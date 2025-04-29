@@ -8,9 +8,12 @@ namespace HashTableLab
 {
     internal class ArrayHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
-        public ArrayHashTable() 
-        { 
+        private KeyValuePair<TKey, TValue>[][] _buckets;
+        private int _size;
 
+        public ArrayHashTable(int size)
+        {
+            this._size = size;
         }
 
         public void Add(TKey key, TValue value)
