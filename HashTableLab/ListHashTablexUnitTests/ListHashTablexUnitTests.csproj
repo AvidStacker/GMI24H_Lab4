@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HashTableLab\HashTableLab.csproj" />
+    <ProjectReference Include="..\HashTableLab\HashTableChaining.csproj" />
   </ItemGroup>
 
   <ItemGroup>
