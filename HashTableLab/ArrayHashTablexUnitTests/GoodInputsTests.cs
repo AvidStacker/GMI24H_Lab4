@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HashTableChaining;
 
 namespace ArrayHashTablexUnitTests
 {
@@ -12,7 +13,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Add_And_Get_Value_ShouldSucceed()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
             table.Add("key1", "value1");
 
             var value = table.Get("key1");
@@ -23,7 +24,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Add_DuplicateKey_ShouldThrowException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
             table.Add("key1", "value1");
 
             Assert.Throws<ArgumentException>(() => table.Add("key1", "value2"));
@@ -32,7 +33,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Remove_Key_ShouldSucceed()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
             table.Add("key1", "value1");
             table.Remove("key1");
 
@@ -42,7 +43,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void ContainsKey_ExistingKey_ShouldReturnTrue()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
             table.Add("key1", "value1");
 
             bool exists = table.ContainsKey("key1");
@@ -53,7 +54,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void ContainsKey_NonExistingKey_ShouldReturnFalse()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             bool exists = table.ContainsKey("unknown key");
 
@@ -63,7 +64,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Get_NonExistingKey_ShouldThrowException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             Assert.Throws<KeyNotFoundException>(() => table.Get("missingKey"));
         }
@@ -71,7 +72,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Remove_NonExistingKey_ShouldThrowException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             Assert.Throws<KeyNotFoundException>(() => table.Remove("missingKey"));
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HashTableChaining;
 
 namespace ArrayHashTablexUnitTests
 {
@@ -12,7 +13,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Add_NullKey_ShouldThrowArgumentNullException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             Assert.Throws<ArgumentNullException>(() => table.Add(null, "value"));
         }
@@ -20,7 +21,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void ContainsKey_NullKey_ShouldThrowArgumentNullException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             Assert.Throws<ArgumentNullException>(() => table.ContainsKey(null));
         }
@@ -28,7 +29,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Remove_NullKey_ShouldThrowArgumentNullException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             Assert.Throws<ArgumentNullException>(() => table.Remove(null));
         }
@@ -36,7 +37,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Get_NullKey_ShouldThrowArgumentNullException()
         {
-            var table = new HashTableLab.ArrayHashTable<string, string>(10);
+            var table = new ArrayHashTable<string, string>(10);
 
             Assert.Throws<ArgumentNullException>(() => table.Get(null));
         }
@@ -44,7 +45,7 @@ namespace ArrayHashTablexUnitTests
         [Fact]
         public void Add_MultipleItems_SameBucket_ShouldWork()
         {
-            var table = new HashTableLab.ArrayHashTable<int, string>(1); // alla keys krockar
+            var table = new ArrayHashTable<int, string>(1); // alla keys krockar
             table.Add(1, "value1");
             table.Add(2, "value2");
             table.Add(3, "value3");

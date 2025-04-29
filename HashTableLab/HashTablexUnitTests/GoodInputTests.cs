@@ -1,3 +1,5 @@
+using HashTableChaining;
+
 namespace HashTablexUnitTests
 {
     public class GoodInputTests
@@ -5,7 +7,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Add_And_Get_Value_ShouldSucceed()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
             table.Add("key1", "value1");
 
             var value = table.Get("key1");
@@ -16,7 +18,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Add_SameKey_ShouldUpdateValue()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
             table.Add("key1", "value1");
             table.Add("key1", "newValue");
 
@@ -28,7 +30,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Remove_Key_ShouldDeleteSuccessfully()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
             table.Add("key1", "value1");
             table.Remove("key1");
 
@@ -38,7 +40,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void ContainsKey_ExistingKey_ShouldReturnTrue()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
             table.Add("key1", "value1");
 
             Assert.True(table.ContainsKey("key1"));
@@ -47,7 +49,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void ContainsKey_NonExistingKey_ShouldReturnFalse()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
 
             Assert.False(table.ContainsKey("missing"));
         }
@@ -55,7 +57,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Add_MultipleItems_ShouldTriggerRehash()
         {
-            var table = new HashTableLab.LinkedListHashTable<int, string>(4);
+            var table = new LinkedListHashTable<int, string>(4);
             for (int i = 0; i < 10; i++)
             {
                 table.Add(i, "value" + i);

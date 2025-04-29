@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace HashTableLab
+namespace HashTableChaining
 {
     internal class Student
     {

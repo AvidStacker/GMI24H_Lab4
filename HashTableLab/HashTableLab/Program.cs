@@ -1,4 +1,4 @@
-﻿namespace HashTableLab
+﻿namespace HashTableChaining
 {
     internal class Program
     {

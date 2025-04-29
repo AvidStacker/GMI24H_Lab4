@@ -5,7 +5,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HashTableLab
+namespace HashTableChaining
 {
     public class LinkedListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {

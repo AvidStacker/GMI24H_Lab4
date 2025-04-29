@@ -1,6 +1,6 @@
 using Xunit;
 using System;
-using HashTableLab
+using HashTableChaining;
 
 namespace ListHashTablexUnitTests
 {

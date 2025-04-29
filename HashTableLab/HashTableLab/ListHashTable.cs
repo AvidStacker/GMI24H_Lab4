@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HashTableLab 
+namespace HashTableChaining
 {
-    internal class ListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
+    public class ListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
         private readonly List<KeyValuePair<TKey, TValue>>[] buckets;
         private readonly int _size;

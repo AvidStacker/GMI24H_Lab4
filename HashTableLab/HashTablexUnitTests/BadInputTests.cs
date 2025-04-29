@@ -1,4 +1,4 @@
-﻿using HashTableLab;
+﻿using HashTableChaining;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Get_NonExistingKey_ShouldThrowKeyNotFoundException()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
 
             Assert.Throws<KeyNotFoundException>(() => table.Get("nonexistent"));
         }
@@ -20,7 +20,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Remove_NonExistingKey_ShouldThrowKeyNotFoundException()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
 
             Assert.Throws<KeyNotFoundException>(() => table.Remove("nonexistent"));
         }
@@ -28,7 +28,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Add_NullKey_ShouldThrowException()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
 
             Assert.Throws<ArgumentNullException>(() => table.Add(null, "value"));
         }
@@ -36,7 +36,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void ContainsKey_NullKey_ShouldThrowException()
         {
-            var table = new HashTableLab.LinkedListHashTable<string, string>();
+            var table = new LinkedListHashTable<string, string>();
 
             Assert.Throws<ArgumentNullException>(() => table.ContainsKey(null));
         }
@@ -44,7 +44,7 @@ namespace HashTablexUnitTests
         [Fact]
         public void Add_Keys_ThatCauseCollision_ShouldHandleViaLinkedList()
         {
-            var table = new HashTableLab.LinkedListHashTable<int, string>(1);
+            var table = new LinkedListHashTable<int, string>(1);
             table.Add(1, "one");
             table.Add(2, "two");
             table.Add(3, "three");
