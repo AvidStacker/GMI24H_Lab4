@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableChaining.csproj|c:\\users\\mattr\\skola\\\u00E5rskurs 2\\gmi24h - algoritmer och mjukvarudesign\\github\\gmi24h_lab4\\hashtablelab\\hashtablelab\\hashfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3480C3C-BEFB-4459-829E-3C96CC55BEC1}|HashTableLab\\HashTableChaining.csproj|solutionrelative:hashtablelab\\hashfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HashFunctions.cs",
+              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashFunctions.cs",
+              "RelativeDocumentMoniker": "HashTableLab\\HashFunctions.cs",
+              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashFunctions.cs",
+              "RelativeToolTip": "HashTableLab\\HashFunctions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T09:34:33.338Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"

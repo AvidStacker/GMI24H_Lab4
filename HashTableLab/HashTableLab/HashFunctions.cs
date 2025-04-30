@@ -11,12 +11,11 @@ namespace HashTableChaining
             ulong hash = 5381;
             foreach (char c in input)
             {
-                hash = ((hash << 5) + hash) + c; 
+                hash = ((hash << 5) + hash) + c;
             }
-            return (int)(hash & 0x7FFFFFFF); 
+            return (int)(hash & 0x7FFFFFFF);
         }
 
-        
         public static int PolynomialHash(string input, int baseValue = 31)
         {
             if (input == null) throw new ArgumentNullException(nameof(input));
@@ -32,7 +31,6 @@ namespace HashTableChaining
             return (int)(hash & 0x7FFFFFFF);
         }
 
-        
         public static int SimpleMurmurHash(string input)
         {
             if (input == null) throw new ArgumentNullException(nameof(input));
