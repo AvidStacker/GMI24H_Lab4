@@ -7,12 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="HashFunctions.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="HashFunctions.cs" />
-  </ItemGroup>
-
 </Project>

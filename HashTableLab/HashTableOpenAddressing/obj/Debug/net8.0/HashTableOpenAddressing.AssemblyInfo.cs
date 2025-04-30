@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HashTableOpenAddressing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+963894706339f10c8388b09e3cc52f3cb1aa91db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19ea20e48907178213e7a359effd4086388e5dee")]
 [assembly: System.Reflection.AssemblyProductAttribute("HashTableOpenAddressing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HashTableOpenAddressing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,9 +1,12 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HashTableChaining
 {
-    public static class HashFunctions
+    public class HashFunctions
     {
         public static int Djb2(string input)
         {

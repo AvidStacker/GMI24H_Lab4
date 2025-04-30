@@ -1,0 +1,7 @@
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_HashFunctionsxUnitTests
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\obj\Debug\net8.0\HashFunctionsxUnitTests.csproj.AssemblyReference.cache
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\obj\Debug\net8.0\HashFunctionsxUnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\obj\Debug\net8.0\HashFunctionsxUnitTests.AssemblyInfoInputs.cache
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\obj\Debug\net8.0\HashFunctionsxUnitTests.AssemblyInfo.cs
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\obj\Debug\net8.0\HashFunctionsxUnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashFunctionsxUnitTests\obj\Debug\net8.0\HashFunctionsxUnitTests.sourcelink.json

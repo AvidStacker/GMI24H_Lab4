@@ -1,8 +1,8 @@
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_LinkedListHashTablexUnitTests
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\testhost.dll
-C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableLab.deps.json
-C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableLab.runtimeconfig.json
-C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableLab.exe
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableChaining.deps.json
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableChaining.runtimeconfig.json
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableChaining.exe
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\testhost.exe
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
@@ -90,8 +90,8 @@ C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GM
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableLab.dll
-C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableLab.pdb
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableChaining.dll
+C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\bin\Debug\net8.0\HashTableChaining.pdb
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\obj\Debug\net8.0\LinkedListHashTablexUnitTests.csproj.AssemblyReference.cache
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\obj\Debug\net8.0\LinkedListHashTablexUnitTests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTablexUnitTests\obj\Debug\net8.0\LinkedListHashTablexUnitTests.AssemblyInfoInputs.cache
