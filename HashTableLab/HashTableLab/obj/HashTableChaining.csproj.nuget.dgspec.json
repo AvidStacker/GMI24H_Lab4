@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mattr\\Skola\\Årskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj": {}
+    "C:\\Users\\Joakim\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mattr\\Skola\\Årskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj": {
+    "C:\\Users\\Joakim\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mattr\\Skola\\Årskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj",
+        "projectUniqueName": "C:\\Users\\Joakim\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj",
         "projectName": "HashTableChaining",
-        "projectPath": "C:\\Users\\Mattr\\Skola\\Årskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj",
-        "packagesPath": "C:\\Users\\Mattr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mattr\\Skola\\Årskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\obj\\",
+        "projectPath": "C:\\Users\\Joakim\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\HashTableChaining.csproj",
+        "packagesPath": "C:\\Users\\Joakim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Joakim\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableLab\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mattr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Joakim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
