@@ -6,26 +6,26 @@ using HashTableOpenAddressing;
 
 class Program
 {
-    const int NumItems = 1000;
+    const int NumItems = 100000;
 
     static void Main()
     {
         Console.WriteLine("Benchmarking Hash Tables...");
 
         // You can benchmark more hash tables with custom hash function
-        Benchmark("Chaining", new ArrayHashTable<Student, int>());
+        Benchmark("Chaining with ArrayHashTable", new ArrayHashTable<Student, int>());
 
         // You can benchmark more hash tables with custom hash functions if needed
-        Benchmark("Chaining", new ListHashTable<Student, int>());
+        Benchmark("Chaining with ListHashTable", new ListHashTable<Student, int>());
 
         // You can benchmark more hash tables with custom hash functions if needed
-        Benchmark("Chaining", new LinkedListHashTable<Student, int>());
+        Benchmark("Chaining with LinkedListHashTable", new LinkedListHashTable<Student, int>());
 
         // Benchmark Linear Probing with a custom Djb2Hash
-        Benchmark("Linear Probing (Custom Hash)", new LinearProbingArrayHashTable<Student, int>(hashFunction: HashFunctions.Djb2Hash));
+        Benchmark("Linear Probing with ArrayHashTable", new LinearProbingArrayHashTable<Student, int>(hashFunction: HashFunctions.Djb2Hash));
 
         // Benchmark Quadratic Probing with custom SimpleMurmurHash
-        Benchmark("Quadratic Probing (Default Hash)", new QuadraticProbingArrayHashTable<Student, int>(hashFunction: HashFunctions.SimpleMurmurHash));
+        Benchmark("Quadratic Probing with ArrayHashTable", new QuadraticProbingArrayHashTable<Student, int>(hashFunction: HashFunctions.SimpleMurmurHash));
     }
 
     static void Benchmark(string name, IHashTable<Student, int> table)
