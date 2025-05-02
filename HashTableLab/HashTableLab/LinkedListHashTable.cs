@@ -216,7 +216,7 @@ namespace HashTableChaining
         // Hash function to determine the index in the array
         private int GetBucketIndex(TKey key)
         {
-            return Math.Abs(key.GetHashCode()) % this._size;
+            return HashFunctions.Djb2Hash(key.ToString()) % this._size;
         }
 
         public int GetSize() { return this._size; }

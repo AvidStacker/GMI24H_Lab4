@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuadraticProbingxUnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19ea20e48907178213e7a359effd4086388e5dee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e51da3637f214c825542620ffc44d05cbd5b8695")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuadraticProbingxUnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuadraticProbingxUnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

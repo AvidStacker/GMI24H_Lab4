@@ -8,7 +8,7 @@ namespace HashTableChaining
 {
     public class HashFunctions
     {
-        public static int Djb2(string input)
+        public static int Djb2Hash(string input)
         {
             if (input == null) throw new ArgumentNullException(nameof(input));
             ulong hash = 5381;

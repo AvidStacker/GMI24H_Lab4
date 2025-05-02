@@ -84,7 +84,7 @@ namespace HashTableChaining
 
         private int GetBucketIndex(TKey key)
         {
-            return Math.Abs(key.GetHashCode()) % _size;
+            return HashFunctions.PolynomialHash(key.ToString()) % _size;
         }
 
         private void Resize()

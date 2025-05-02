@@ -7,7 +7,7 @@ namespace QuadraticProbingxUnitTests
         [Fact]
         public void AddAndGet_ShouldReturnCorrectValue()
         {
-            var table = new QuadraticProbingHashTable<string, int>();
+            var table = new QuadraticProbingArrayHashTable<string, int>();
             table.Add("A", 1);
             table.Add("B", 2);
 

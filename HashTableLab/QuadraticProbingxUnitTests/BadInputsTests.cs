@@ -12,7 +12,7 @@ namespace QuadraticProbingxUnitTests
         [Fact]
         public void Add_NullKey_ShouldThrow()
         {
-            var table = new QuadraticProbingHashTable<string, string>();
+            var table = new QuadraticProbingArrayHashTable<string, string>();
 
             Assert.Throws<ArgumentNullException>(() => table.Add(null, "value"));
         }
@@ -20,7 +20,7 @@ namespace QuadraticProbingxUnitTests
         [Fact]
         public void Get_NonExistentKey_ShouldThrow()
         {
-            var table = new QuadraticProbingHashTable<string, string>();
+            var table = new QuadraticProbingArrayHashTable<string, string>();
 
             Assert.Throws<KeyNotFoundException>(() => table.Get("missing"));
         }
@@ -28,7 +28,7 @@ namespace QuadraticProbingxUnitTests
         [Fact]
         public void Add_DuplicateKey_ShouldThrow()
         {
-            var table = new QuadraticProbingHashTable<string, int>();
+            var table = new QuadraticProbingArrayHashTable<string, int>();
             table.Add("key", 1);
 
             Assert.Throws<ArgumentException>(() => table.Add("key", 2));
