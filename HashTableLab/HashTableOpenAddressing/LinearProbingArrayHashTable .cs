@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HashTableChaining;
 
 namespace HashTableOpenAddressing
@@ -14,8 +11,9 @@ namespace HashTableOpenAddressing
         private int size;
         private const double LoadFactor = 0.6;
         private readonly HashEntry<TKey, TValue> Tombstone = new HashEntry<TKey, TValue>(default, default);
+        private readonly Func<string, int> hashFunction;  // Added hash function
 
-        public class HashEntry <TKey, TValue>
+        public class HashEntry<TKey, TValue>
         {
             public TKey Key { get; set; }
             public TValue Value { get; set; }
@@ -26,11 +24,30 @@ namespace HashTableOpenAddressing
             }
         }
 
-        public LinearProbingArrayHashTable(int initialCapacity = 16)
+        // Constructor now accepts an optional hash function parameter
+        public LinearProbingArrayHashTable(int initialCapacity = 16, Func<string, int> hashFunction = null)
         {
             this.capacity = initialCapacity;
-            this.table = new HashEntry<TKey, TValue>[capacity];
+            this.table = new HashEntry<TKey, TValue>[this.capacity];
             this.size = 0;
+            // Use the provided hash function or fall back to DefaultHash
+            this.hashFunction = hashFunction ?? DefaultHash;
+        }
+
+        private int DefaultHash(string key)
+        {
+            return Math.Abs(HashFunctions.SimpleMurmurHash(key)) % this.capacity;
+        }
+
+        // Use this.hashFunction here instead of hardcoding the hash function
+        private int GetHash(TKey key)
+        {
+            return this.hashFunction(key.ToString());
+        }
+
+        private int Hash(TKey key, int i)
+        {
+            return (this.GetHash(key) + i) % this.capacity;
         }
 
         public void Add(TKey key, TValue value)
@@ -38,24 +55,25 @@ namespace HashTableOpenAddressing
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
-            if ((double)size / capacity >= LoadFactor)
-                Resize();
+            if ((double)this.size / this.capacity >= LoadFactor)
+                this.Resize();
 
-            int index = GetHash(key);
+            int index = this.GetHash(key);
             int firstTombstone = -1;
 
-            for (int i = 0; i < capacity; i++)
+            for (int i = 0; i < this.capacity; i++)
             {
-                int probeIndex = (index + i) % capacity;
-                var entry = table[probeIndex];
+                int probeIndex = (index + i) % this.capacity;
+                var entry = this.table[probeIndex];
 
                 if (entry == null)
                 {
-                    table[firstTombstone >= 0 ? firstTombstone : probeIndex] = new HashEntry<TKey, TValue>(key, value);
-                    size++;
+                    this.table[firstTombstone >= 0 ? firstTombstone : probeIndex] = new HashEntry<TKey, TValue>(key, value);
+                    this.size++;
                     return;
                 }
-                if (entry == Tombstone && firstTombstone == -1)
+
+                if (entry == this.Tombstone && firstTombstone == -1)
                 {
                     firstTombstone = probeIndex;
                 }
@@ -70,15 +88,15 @@ namespace HashTableOpenAddressing
 
         public TValue Get(TKey key)
         {
-            for (int i = 0; i < capacity; i++)
+            for (int i = 0; i < this.capacity; i++)
             {
-                int index = Hash(key, i);
-                var entry = table[index];
+                int index = this.Hash(key, i);
+                var entry = this.table[index];
 
                 if (entry == null)
                     break;
 
-                if (entry != Tombstone && entry.Key.Equals(key))
+                if (entry != this.Tombstone && entry.Key.Equals(key))
                     return entry.Value;
             }
 
@@ -87,18 +105,18 @@ namespace HashTableOpenAddressing
 
         public void Remove(TKey key)
         {
-            for (int i = 0; i < capacity; i++)
+            for (int i = 0; i < this.capacity; i++)
             {
-                int index = Hash(key, i);
-                var entry = table[index];
+                int index = this.Hash(key, i);
+                var entry = this.table[index];
 
                 if (entry == null)
                     return;
 
-                if (entry != Tombstone && entry.Key.Equals(key))
+                if (entry != this.Tombstone && entry.Key.Equals(key))
                 {
-                    table[index] = Tombstone;
-                    size--;
+                    this.table[index] = this.Tombstone;
+                    this.size--;
                     return;
                 }
             }
@@ -106,41 +124,31 @@ namespace HashTableOpenAddressing
 
         private void Resize()
         {
-            var oldTable = table;
-            capacity *= 2;
-            table = new HashEntry<TKey, TValue>[capacity];
-            size = 0;
+            var oldTable = this.table;
+            this.capacity *= 2;
+            this.table = new HashEntry<TKey, TValue>[this.capacity];
+            this.size = 0;
 
             foreach (var entry in oldTable)
             {
-                if (entry != null && entry != Tombstone)
+                if (entry != null && entry != this.Tombstone)
                 {
-                    Add(entry.Key, entry.Value);
+                    this.Add(entry.Key, entry.Value);
                 }
             }
         }
 
-        private int GetHash(TKey key)
-        {
-            return HashFunctions.PolynomialHash(key.ToString()) % capacity;
-        }
-
-        private int Hash(TKey key, int i)
-        {
-            return (GetHash(key) + i) % capacity;
-        }
-
         public bool ContainsKey(TKey key)
         {
-            for (int i = 0; i < capacity; i++)
+            for (int i = 0; i < this.capacity; i++)
             {
-                int index = Hash(key, i);
-                var entry = table[index];
+                int index = this.Hash(key, i);
+                var entry = this.table[index];
 
                 if (entry == null)
                     return false;
 
-                if (entry != Tombstone && entry.Key.Equals(key))
+                if (entry != this.Tombstone && entry.Key.Equals(key))
                     return true;
             }
 

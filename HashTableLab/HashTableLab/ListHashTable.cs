@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace HashTableChaining
+﻿namespace HashTableChaining
 {
     public class ListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
@@ -10,34 +6,38 @@ namespace HashTableChaining
         private int _size;
         private int _count;
         private readonly double _loadFactorThreshold = 0.75;
+        private readonly Func<TKey, int> _hashFunction;
 
-        public ListHashTable(int size = 10)
+        public ListHashTable(int size = 10, Func<TKey, int> hashFunction = null)
         {
             if (size <= 0)
                 throw new ArgumentException("Size must be greater than zero.", nameof(size));
 
-            _size = size;
-            buckets = new List<KeyValuePair<TKey, TValue>>[_size];
-            for (int i = 0; i < _size; i++)
-                buckets[i] = new List<KeyValuePair<TKey, TValue>>();
+            this._size = size;
+            // Use the provided hash function or default to one based on Id
+            this._hashFunction = hashFunction ?? (key => key.GetHashCode());
+
+            this.buckets = new List<KeyValuePair<TKey, TValue>>[this._size];
+            for (int i = 0; i < this._size; i++)
+                this.buckets[i] = new List<KeyValuePair<TKey, TValue>>();
         }
 
-        public int Size => _size;
+        public int Size => this._size;
 
         public void Add(TKey key, TValue value)
         {
             if (key == null)
                 throw new ArgumentNullException(nameof(key), "Key cannot be null.");
 
-            if (ContainsKey(key))
+            if (this.ContainsKey(key))
                 throw new ArgumentException("An element with the same key already exists.");
 
-            if ((_count + 1.0) / _size > _loadFactorThreshold)
-                Resize();
+            if ((this._count + 1.0) / this._size > this._loadFactorThreshold)
+                this.Resize();
 
-            var bucket = buckets[GetBucketIndex(key)];
+            var bucket = this.buckets[this.GetBucketIndex(key)];
             bucket.Add(new KeyValuePair<TKey, TValue>(key, value));
-            _count++;
+            this._count++;
         }
 
         public TValue Get(TKey key)
@@ -45,7 +45,7 @@ namespace HashTableChaining
             if (key == null)
                 throw new ArgumentNullException(nameof(key), "Key cannot be null.");
 
-            var bucket = buckets[GetBucketIndex(key)];
+            var bucket = this.buckets[this.GetBucketIndex(key)];
             foreach (var kvp in bucket)
             {
                 if (kvp.Key.Equals(key))
@@ -59,13 +59,13 @@ namespace HashTableChaining
             if (key == null)
                 throw new ArgumentNullException(nameof(key), "Key cannot be null.");
 
-            var bucket = buckets[GetBucketIndex(key)];
+            var bucket = this.buckets[this.GetBucketIndex(key)];
             var index = bucket.FindIndex(kvp => kvp.Key.Equals(key));
 
             if (index >= 0)
             {
                 bucket.RemoveAt(index);
-                _count--;
+                this._count--;
             }
             else
             {
@@ -78,23 +78,23 @@ namespace HashTableChaining
             if (key == null)
                 throw new ArgumentNullException(nameof(key), "Key cannot be null.");
 
-            var bucket = buckets[GetBucketIndex(key)];
+            var bucket = this.buckets[this.GetBucketIndex(key)];
             return bucket.Any(kvp => kvp.Key.Equals(key));
         }
 
         private int GetBucketIndex(TKey key)
         {
-            return HashFunctions.PolynomialHash(key.ToString()) % _size;
+            return Math.Abs(this._hashFunction(key) % this._size);
         }
 
         private void Resize()
         {
-            int newSize = _size * 2;
+            int newSize = this._size * 2;
             var newBuckets = new List<KeyValuePair<TKey, TValue>>[newSize];
             for (int i = 0; i < newSize; i++)
                 newBuckets[i] = new List<KeyValuePair<TKey, TValue>>();
 
-            foreach (var bucket in buckets)
+            foreach (var bucket in this.buckets)
             {
                 foreach (var kvp in bucket)
                 {
@@ -103,12 +103,8 @@ namespace HashTableChaining
                 }
             }
 
-            buckets = newBuckets;
-            _size = newSize;
-            // _count stays the same
+            this.buckets = newBuckets;
+            this._size = newSize;
         }
     }
 }
-
-
-

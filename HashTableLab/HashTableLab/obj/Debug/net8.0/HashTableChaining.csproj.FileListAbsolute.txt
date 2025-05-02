@@ -13,3 +13,18 @@ C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GM
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.pdb
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.genruntimeconfig.cache
 C:\Users\Mattr\Skola\Årskurs 2\GMI24H - Algoritmer och mjukvarudesign\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\ref\HashTableChaining.dll
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.AssemblyInfoInputs.cache
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.AssemblyInfo.cs
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.csproj.CoreCompileInputs.cache
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.sourcelink.json
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.dll
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\refint\HashTableChaining.dll
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.pdb
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\bin\Debug\net8.0\HashTableChaining.exe
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\bin\Debug\net8.0\HashTableChaining.deps.json
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\bin\Debug\net8.0\HashTableChaining.runtimeconfig.json
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\bin\Debug\net8.0\HashTableChaining.dll
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\bin\Debug\net8.0\HashTableChaining.pdb
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\HashTableChaining.genruntimeconfig.cache
+C:\Users\ilage\Documents\GitHub\GMI24H_Lab4\HashTableLab\HashTableLab\obj\Debug\net8.0\ref\HashTableChaining.dll

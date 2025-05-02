@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HashTableBenchmark/1.0.0": {
+        "dependencies": {
+          "HashTableChaining": "1.0.0",
+          "HashTableOpenAddressing": "1.0.0"
+        },
+        "runtime": {
+          "HashTableBenchmark.dll": {}
+        }
+      },
+      "HashTableChaining/1.0.0": {
+        "runtime": {
+          "HashTableChaining.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "HashTableOpenAddressing/1.0.0": {
+        "dependencies": {
+          "HashTableChaining": "1.0.0"
+        },
+        "runtime": {
+          "HashTableOpenAddressing.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HashTableBenchmark/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HashTableChaining/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HashTableOpenAddressing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

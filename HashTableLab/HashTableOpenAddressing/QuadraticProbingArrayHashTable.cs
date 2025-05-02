@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using HashTableChaining;
 
 namespace HashTableOpenAddressing
@@ -11,6 +10,7 @@ namespace HashTableOpenAddressing
         private int size;
         private const double LoadFactor = 0.6;
         private readonly HashEntry<TKey, TValue> Tombstone = new HashEntry<TKey, TValue>(default, default);
+        private readonly Func<string, int> hashFunction;
 
         public class HashEntry<TKey, TValue>
         {
@@ -24,47 +24,28 @@ namespace HashTableOpenAddressing
             }
         }
 
-        public QuadraticProbingArrayHashTable(int initialCapacity = 16)
+        // Constructor now accepts an optional hash function parameter
+        public QuadraticProbingArrayHashTable(int initialCapacity = 16, Func<string, int> hashFunction = null)
         {
             this.capacity = initialCapacity;
             this.table = new HashEntry<TKey, TValue>[this.capacity];
             this.size = 0;
+            this.hashFunction = hashFunction ?? DefaultHash;
         }
 
-        private void Resize()
+        private int DefaultHash(string key)
         {
-            int newCapacity = this.capacity * 2;
-            var newTable = new HashEntry<TKey, TValue>[newCapacity];
-
-            foreach (var entry in this.table)
-            {
-                if (entry != null && entry != this.Tombstone)
-                {
-                    int index = this.GetHash(entry.Key, newCapacity);
-                    for (int j = 0; j < newCapacity; j++)
-                    {
-                        int probeIndex = (index + j * j) % newCapacity;
-                        if (newTable[probeIndex] == null)
-                        {
-                            newTable[probeIndex] = new HashEntry<TKey, TValue>(entry.Key, entry.Value);
-                            break;
-                        }
-                    }
-                }
-            }
-
-            this.table = newTable;
-            this.capacity = newCapacity;
+            return Math.Abs(HashFunctions.SimpleMurmurHash(key)) % this.capacity;
         }
 
         private int GetHash(TKey key)
         {
-            return this.GetHash(key, this.capacity);
+            return this.hashFunction(key.ToString());
         }
 
         private int GetHash(TKey key, int mod)
         {
-            return Math.Abs(HashFunctions.SimpleMurmurHash(key.ToString())) % mod;
+            return Math.Abs(this.hashFunction(key.ToString())) % mod;
         }
 
         private int Hash(TKey key, int i)
@@ -77,9 +58,13 @@ namespace HashTableOpenAddressing
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
+            // Resize if load factor exceeds the threshold
             if ((double)this.size / this.capacity >= LoadFactor)
-                this.Resize();
+            {
+                Resize();
+            }
 
+            // Proceed with adding the new element after resizing
             int firstTombstone = -1;
 
             for (int i = 0; i < this.capacity; i++)
@@ -89,6 +74,7 @@ namespace HashTableOpenAddressing
 
                 if (entry == null)
                 {
+                    // If we found an empty spot or the first tombstone, add the new element
                     this.table[firstTombstone >= 0 ? firstTombstone : probeIndex] = new HashEntry<TKey, TValue>(key, value);
                     this.size++;
                     return;
@@ -96,7 +82,7 @@ namespace HashTableOpenAddressing
 
                 if (entry == this.Tombstone && firstTombstone == -1)
                 {
-                    firstTombstone = probeIndex;
+                    firstTombstone = probeIndex;  // Track the first tombstone position
                 }
                 else if (entry.Key.Equals(key))
                 {
@@ -104,7 +90,24 @@ namespace HashTableOpenAddressing
                 }
             }
 
+            // If we cannot add the element, throw an exception (this should never happen due to resizing)
             throw new InvalidOperationException("Hash table is full.");
+        }
+
+        private void Resize()
+        {
+            var oldTable = this.table;
+
+            this.capacity *= 2;
+            this.table = new HashEntry<TKey, TValue>[this.capacity];
+
+            foreach (var entry in oldTable)
+            {
+                if (entry != null && entry != this.Tombstone)
+                {
+                    Add(entry.Key, entry.Value);
+                }
+            }
         }
 
         public bool ContainsKey(TKey key)

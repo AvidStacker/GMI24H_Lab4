@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HashTableChaining
+﻿namespace HashTableChaining
 {
     public class ArrayHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
         private KeyValuePair<TKey, TValue>[][] _buckets;
         private int _size;
+        private readonly Func<string, int> _hashFunction;
 
-        public ArrayHashTable(int size)
+        public ArrayHashTable(int size = 10, Func<string, int> hashFunction = null)
         {
             this._size = size;
             this._buckets = new KeyValuePair<TKey, TValue>[this._size][];
+
+            this._hashFunction = hashFunction ?? new Func<string, int>(input => HashFunctions.PolynomialHash(input, 31));
         }
 
         public void Add(TKey key, TValue value)
@@ -122,7 +119,7 @@ namespace HashTableChaining
 
         private int GetIndex(TKey key)
         {
-            return Math.Abs(key.GetHashCode()) % this._size;
+            return this._hashFunction(key.ToString()) % this._size;
         }
     }
 }

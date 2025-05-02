@@ -14,7 +14,7 @@ namespace HashFunctionsxUnitTests
         [Fact]
         public void Djb2_NullInput_ShouldThrow()
         {
-            Assert.Throws<ArgumentNullException>(() => HashFunctions.Djb2(null));
+            Assert.Throws<ArgumentNullException>(() => HashFunctions.Djb2Hash(null));
         }
 
         [Fact]
