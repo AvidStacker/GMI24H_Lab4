@@ -1,10 +1,19 @@
 ﻿namespace HashTableChaining
 {
+    /// <summary>
+    /// A hash table implementation using separate chaining with singly linked lists.
+    /// Collisions are handled by chaining entries in a list within each bucket.
+    /// </summary>
+    /// <typeparam name="TKey">The type of keys used for indexing values.</typeparam>
+    /// <typeparam name="TValue">The type of values stored in the table.</typeparam>
     public class LinkedListHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
         private static readonly double DEFAULT_LOAD_FACTOR = 0.75;
         private readonly Func<TKey, int> _hashFunction;
 
+        /// <summary>
+        /// Internal node class for storing key-value pairs and chaining via 'Next'.
+        /// </summary>
         private class Node
         {
             public TKey Key { get; set; }
@@ -22,6 +31,9 @@
         private int _size;
         private Node[] _buckets;
 
+        /// <summary>
+        /// Creates a new LinkedList-based hash table with a default or custom hash function.
+        /// </summary>
         public LinkedListHashTable(int size = 10, Func<TKey, int> hashFunction = null)
         {
             this._size = size;
@@ -29,6 +41,11 @@
             this._hashFunction = hashFunction ?? (key => HashFunctions.Djb2Hash(key.ToString()));
         }
 
+        /// <summary>
+        /// Adds a key-value pair to the hash table.
+        /// Updates the value if the key already exists.
+        /// Rehashes the table if load factor threshold is reached.
+        /// </summary>
         public void Add(TKey key, TValue value)
         {
             if (key == null)
@@ -53,12 +70,14 @@
             {
                 Node current = this._buckets[index];
 
+                // Check first node
                 if (EqualityComparer<TKey>.Default.Equals(current.Key, key))
                 {
                     current.Value = value;
                     return;
                 }
 
+                // Traverse to find match or end
                 while (current.Next != null)
                 {
                     current = current.Next;
@@ -69,10 +88,15 @@
                     }
                 }
 
+                // Append new node at the end
                 current.Next = newNode;
             }
         }
 
+        /// <summary>
+        /// Rehashes all elements into a new table with double the size.
+        /// Optionally includes one additional key-value pair after resizing.
+        /// </summary>
         private void Rehash(TKey? key, TValue? value)
         {
             Node[] oldbuckets = this._buckets;
@@ -108,12 +132,17 @@
                 }
             }
 
+            // Re-add triggering key-value pair if provided
             if (key != null && value != null)
             {
                 this.Add(key, value);
             }
         }
 
+        /// <summary>
+        /// Retrieves the value associated with a specific key.
+        /// Throws KeyNotFoundException if the key does not exist.
+        /// </summary>
         public TValue Get(TKey key)
         {
             if (key == null)
@@ -136,6 +165,10 @@
             throw new KeyNotFoundException($"Key '{key}' not found.");
         }
 
+        /// <summary>
+        /// Removes the key-value pair associated with the given key.
+        /// Throws KeyNotFoundException if the key does not exist.
+        /// </summary>
         public void Remove(TKey key)
         {
             if (key == null)
@@ -168,6 +201,9 @@
             throw new KeyNotFoundException($"Key '{key}' not found.");
         }
 
+        /// <summary>
+        /// Determines if the table contains a given key.
+        /// </summary>
         public bool ContainsKey(TKey key)
         {
             if (key == null)
@@ -190,13 +226,22 @@
             return false;
         }
 
+        /// <summary>
+        /// Computes the index for a key using the hash function.
+        /// </summary>
         private int GetBucketIndex(TKey key)
         {
             return this._hashFunction(key) % this._size;
         }
 
+        /// <summary>
+        /// Returns the current size of the hash table (number of buckets).
+        /// </summary>
         public int GetSize() { return this._size; }
 
+        /// <summary>
+        /// Returns the total number of key-value pairs stored in the table.
+        /// </summary>
         public int GetCount()
         {
             int count = 0;

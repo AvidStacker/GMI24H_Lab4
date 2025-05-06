@@ -11,6 +11,10 @@ namespace ArrayHashTablexUnitTests
     public class BadInputsTests
     {
         [Fact]
+        /// <summary>
+        /// Verifies that adding a null key throws an ArgumentNullException.
+        /// This ensures the implementation does not allow invalid null keys.
+        /// </summary>
         public void Add_NullKey_ShouldThrowArgumentNullException()
         {
             var table = new ArrayHashTable<string, string>(10);
@@ -19,6 +23,10 @@ namespace ArrayHashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Verifies that calling ContainsKey with a null key throws an ArgumentNullException.
+        /// Ensures input validation is consistent across lookup-related methods.
+        /// </summary>
         public void ContainsKey_NullKey_ShouldThrowArgumentNullException()
         {
             var table = new ArrayHashTable<string, string>(10);
@@ -27,6 +35,10 @@ namespace ArrayHashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Verifies that trying to remove a null key results in an ArgumentNullException.
+        /// This confirms proper input validation in the Remove method.
+        /// </summary>
         public void Remove_NullKey_ShouldThrowArgumentNullException()
         {
             var table = new ArrayHashTable<string, string>(10);
@@ -35,6 +47,10 @@ namespace ArrayHashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Verifies that attempting to retrieve a value with a null key throws ArgumentNullException.
+        /// This helps ensure stability when handling invalid inputs in the Get method.
+        /// </summary>
         public void Get_NullKey_ShouldThrowArgumentNullException()
         {
             var table = new ArrayHashTable<string, string>(10);
@@ -43,9 +59,14 @@ namespace ArrayHashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Verifies that multiple keys that hash to the same bucket (due to small table size)
+        /// can coexist and be retrieved correctly.
+        /// This ensures the table handles collisions properly, even in extreme scenarios.
+        /// </summary>
         public void Add_MultipleItems_SameBucket_ShouldWork()
         {
-            var table = new ArrayHashTable<int, string>(1); // alla keys krockar
+            var table = new ArrayHashTable<int, string>(1); // All keys will collide due to mod 1
             table.Add(1, "value1");
             table.Add(2, "value2");
             table.Add(3, "value3");

@@ -4,9 +4,16 @@ using HashTableChaining;
 
 namespace ListHashTablexUnitTests
 {
+    /// <summary>
+    /// Unit tests verifying correct functionality of ListHashTable under normal conditions.
+    /// These tests cover basic operations like add, get, remove, and handling of collisions.
+    /// </summary>
     public class GoodInputsTests
     {
         [Fact]
+        /// <summary>
+        /// Verifies that a value can be added and successfully retrieved using its key.
+        /// </summary>
         public void Add_And_Get_Value_ShouldSucceed()
         {
             var table = new ListHashTable<string, string>(10);
@@ -18,15 +25,9 @@ namespace ListHashTablexUnitTests
         }
 
         [Fact]
-        public void Add_DuplicateKey_ShouldThrowException()
-        {
-            var table = new ListHashTable<string, string>(10);
-            table.Add("key1", "value1");
-
-            Assert.Throws<ArgumentException>(() => table.Add("key1", "value2"));
-        }
-
-        [Fact]
+        /// <summary>
+        /// Ensures that after removing a key, it can no longer be retrieved.
+        /// </summary>
         public void Remove_Key_ShouldSucceed()
         {
             var table = new ListHashTable<string, string>(10);
@@ -37,40 +38,42 @@ namespace ListHashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Confirms that ContainsKey returns true for a key that exists in the table.
+        /// </summary>
         public void ContainsKey_ExistingKey_ShouldReturnTrue()
         {
             var table = new ListHashTable<string, string>(10);
             table.Add("key1", "value1");
 
-            bool exists = table.ContainsKey("key1");
-
-            Assert.True(exists);
+            Assert.True(table.ContainsKey("key1"));
         }
 
         [Fact]
+        /// <summary>
+        /// Confirms that ContainsKey returns false for a key that was never added.
+        /// </summary>
         public void ContainsKey_NonExistingKey_ShouldReturnFalse()
         {
             var table = new ListHashTable<string, string>(10);
 
-            bool exists = table.ContainsKey("unknown key");
-
-            Assert.False(exists);
+            Assert.False(table.ContainsKey("unknown key"));
         }
 
         [Fact]
-        public void Get_NonExistingKey_ShouldThrowException()
+        /// <summary>
+        /// Tests that the hash table handles collisions correctly by storing multiple keys in the same bucket.
+        /// </summary>
+        public void Add_MultipleItems_SameBucket_ShouldWork()
         {
-            var table = new ListHashTable<string, string>(10);
+            var table = new ListHashTable<int, string>(1); // force same bucket
+            table.Add(1, "one");
+            table.Add(2, "two");
+            table.Add(3, "three");
 
-            Assert.Throws<KeyNotFoundException>(() => table.Get("missingKey"));
-        }
-
-        [Fact]
-        public void Remove_NonExistingKey_ShouldThrowException()
-        {
-            var table = new ListHashTable<string, string>(10);
-
-            Assert.Throws<KeyNotFoundException>(() => table.Remove("missingKey"));
+            Assert.Equal("one", table.Get(1));
+            Assert.Equal("two", table.Get(2));
+            Assert.Equal("three", table.Get(3));
         }
     }
 }

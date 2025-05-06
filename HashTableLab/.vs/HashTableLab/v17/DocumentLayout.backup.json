@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\",
+  "WorkspaceRootPath": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CE63C46-E80F-4EEF-87FD-BB5B8B520AB0}|HashTableBenchmark\\HashTableBenchmark.csproj|c:\\users\\ilage\\documents\\github\\gmi24h_lab4\\hashtablelab\\hashtablebenchmark\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE63C46-E80F-4EEF-87FD-BB5B8B520AB0}|HashTableBenchmark\\HashTableBenchmark.csproj|solutionrelative:hashtablebenchmark\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF319276-E5E9-4A2D-8A88-B6A96B2EC8BA}|QuadraticProbingxUnitTests\\QuadraticProbingxUnitTests.csproj|c:\\users\\ilage\\documents\\github\\gmi24h_lab4\\hashtablelab\\quadraticprobingxunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF319276-E5E9-4A2D-8A88-B6A96B2EC8BA}|QuadraticProbingxUnitTests\\QuadraticProbingxUnitTests.csproj|solutionrelative:quadraticprobingxunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB34CB98-A4A4-468C-9E83-17B5A3C4FB37}|ListHashTablexUnitTests\\ListHashTablexUnitTests.csproj|c:\\users\\ilage\\documents\\github\\gmi24h_lab4\\hashtablelab\\listhashtablexunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB34CB98-A4A4-468C-9E83-17B5A3C4FB37}|ListHashTablexUnitTests\\ListHashTablexUnitTests.csproj|c:\\users\\mattr\\skola\\\u00E5rskurs 2\\gmi24h - algoritmer och mjukvarudesign\\github\\gmi24h_lab4\\hashtablelab\\listhashtablexunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB34CB98-A4A4-468C-9E83-17B5A3C4FB37}|ListHashTablexUnitTests\\ListHashTablexUnitTests.csproj|solutionrelative:listhashtablexunittests\\goodinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB34CB98-A4A4-468C-9E83-17B5A3C4FB37}|ListHashTablexUnitTests\\ListHashTablexUnitTests.csproj|c:\\users\\ilage\\documents\\github\\gmi24h_lab4\\hashtablelab\\listhashtablexunittests\\badinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB34CB98-A4A4-468C-9E83-17B5A3C4FB37}|ListHashTablexUnitTests\\ListHashTablexUnitTests.csproj|solutionrelative:listhashtablexunittests\\badinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF319276-E5E9-4A2D-8A88-B6A96B2EC8BA}|QuadraticProbingxUnitTests\\QuadraticProbingxUnitTests.csproj|c:\\users\\ilage\\documents\\github\\gmi24h_lab4\\hashtablelab\\quadraticprobingxunittests\\badinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF319276-E5E9-4A2D-8A88-B6A96B2EC8BA}|QuadraticProbingxUnitTests\\QuadraticProbingxUnitTests.csproj|solutionrelative:quadraticprobingxunittests\\badinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCEA245E-9574-4000-B04B-F53AFF4DBF5A}|ArrayHashTablexUnitTests\\ArrayHashTablexUnitTests.csproj|c:\\users\\ilage\\documents\\github\\gmi24h_lab4\\hashtablelab\\arrayhashtablexunittests\\badinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCEA245E-9574-4000-B04B-F53AFF4DBF5A}|ArrayHashTablexUnitTests\\ArrayHashTablexUnitTests.csproj|solutionrelative:arrayhashtablexunittests\\badinputstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,80 +19,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableBenchmark\\Program.cs",
-              "RelativeDocumentMoniker": "HashTableBenchmark\\Program.cs",
-              "ToolTip": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\HashTableBenchmark\\Program.cs*",
-              "RelativeToolTip": "HashTableBenchmark\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:41:09.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "GoodInputsTests.cs",
-              "DocumentMoniker": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\ListHashTablexUnitTests\\GoodInputsTests.cs",
+              "DocumentMoniker": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ListHashTablexUnitTests\\GoodInputsTests.cs",
               "RelativeDocumentMoniker": "ListHashTablexUnitTests\\GoodInputsTests.cs",
-              "ToolTip": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\ListHashTablexUnitTests\\GoodInputsTests.cs",
+              "ToolTip": "C:\\Users\\Mattr\\Skola\\\u00C5rskurs 2\\GMI24H - Algoritmer och mjukvarudesign\\GitHub\\GMI24H_Lab4\\HashTableLab\\ListHashTablexUnitTests\\GoodInputsTests.cs",
               "RelativeToolTip": "ListHashTablexUnitTests\\GoodInputsTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:40:13.702Z",
+              "WhenOpened": "2025-05-06T13:49:34.984Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BadInputstests.cs",
-              "DocumentMoniker": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\ListHashTablexUnitTests\\BadInputstests.cs",
-              "RelativeDocumentMoniker": "ListHashTablexUnitTests\\BadInputstests.cs",
-              "ToolTip": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\ListHashTablexUnitTests\\BadInputstests.cs",
-              "RelativeToolTip": "ListHashTablexUnitTests\\BadInputstests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:40:12.599Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BadInputsTests.cs",
-              "DocumentMoniker": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\QuadraticProbingxUnitTests\\BadInputsTests.cs",
-              "RelativeDocumentMoniker": "QuadraticProbingxUnitTests\\BadInputsTests.cs",
-              "ToolTip": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\QuadraticProbingxUnitTests\\BadInputsTests.cs",
-              "RelativeToolTip": "QuadraticProbingxUnitTests\\BadInputsTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:40:11.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GoodInputsTests.cs",
-              "DocumentMoniker": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\QuadraticProbingxUnitTests\\GoodInputsTests.cs",
-              "RelativeDocumentMoniker": "QuadraticProbingxUnitTests\\GoodInputsTests.cs",
-              "ToolTip": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\QuadraticProbingxUnitTests\\GoodInputsTests.cs",
-              "RelativeToolTip": "QuadraticProbingxUnitTests\\GoodInputsTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:39:59.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BadInputsTests.cs",
-              "DocumentMoniker": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\BadInputsTests.cs",
-              "RelativeDocumentMoniker": "ArrayHashTablexUnitTests\\BadInputsTests.cs",
-              "ToolTip": "C:\\Users\\ilage\\Documents\\GitHub\\GMI24H_Lab4\\HashTableLab\\ArrayHashTablexUnitTests\\BadInputsTests.cs",
-              "RelativeToolTip": "ArrayHashTablexUnitTests\\BadInputsTests.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBEAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:39:36.16Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -128,10 +51,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
@@ -140,7 +59,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         },

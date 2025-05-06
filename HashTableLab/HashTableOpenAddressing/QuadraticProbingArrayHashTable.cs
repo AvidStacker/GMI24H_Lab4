@@ -3,15 +3,26 @@ using HashTableChaining;
 
 namespace HashTableOpenAddressing
 {
+    /// <summary>
+    /// A hash table implementation using quadratic probing to resolve collisions.
+    /// When a collision occurs, the algorithm probes slots using the formula: (hash + i²) % capacity.
+    /// </summary>
+    /// <typeparam name="TKey">The type of the keys.</typeparam>
+    /// <typeparam name="TValue">The type of the values.</typeparam>
     public class QuadraticProbingArrayHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
         private HashEntry<TKey, TValue>[] table;
         private int capacity;
         private int size;
         private const double LoadFactor = 0.6;
+        // A special marker to represent a deleted item
         private readonly HashEntry<TKey, TValue> Tombstone = new HashEntry<TKey, TValue>(default, default);
+        // Allows for custom hash function (injected or default)
         private readonly Func<string, int> hashFunction;
 
+        /// <summary>
+        /// Represents an entry in the hash table.
+        /// </summary>
         public class HashEntry<TKey, TValue>
         {
             public TKey Key { get; set; }
@@ -24,7 +35,9 @@ namespace HashTableOpenAddressing
             }
         }
 
-        // Constructor now accepts an optional hash function parameter
+        /// <summary>
+        /// Initializes a new hash table with optional custom hash function.
+        /// </summary>
         public QuadraticProbingArrayHashTable(int initialCapacity = 16, Func<string, int> hashFunction = null)
         {
             this.capacity = initialCapacity;
@@ -33,32 +46,41 @@ namespace HashTableOpenAddressing
             this.hashFunction = hashFunction ?? DefaultHash;
         }
 
+        /// <summary>
+        /// Default hash function using SimpleMurmurHash.
+        /// </summary>
         private int DefaultHash(string key)
         {
             return Math.Abs(HashFunctions.SimpleMurmurHash(key)) % this.capacity;
         }
 
+        /// <summary>
+        /// Computes base hash value for a key.
+        /// </summary>
         private int GetHash(TKey key)
         {
             return this.hashFunction(key.ToString());
         }
 
-        private int GetHash(TKey key, int mod)
-        {
-            return Math.Abs(this.hashFunction(key.ToString())) % mod;
-        }
-
+        /// <summary>
+        /// Quadratic probing formula: (hash + i^2) mod capacity
+        /// </summary>
         private int Hash(TKey key, int i)
         {
             return (this.GetHash(key) + i * i) % this.capacity;
         }
 
+        /// <summary>
+        /// Adds a new key-value pair to the table.
+        /// Uses quadratic probing to resolve collisions.
+        /// If the key exists, throws an exception.
+        /// </summary>
         public void Add(TKey key, TValue value)
         {
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
-            // Resize if load factor exceeds the threshold
+            // Resize if load factor threshold is exceeded
             if ((double)this.size / this.capacity >= LoadFactor)
             {
                 Resize();
@@ -94,6 +116,10 @@ namespace HashTableOpenAddressing
             throw new InvalidOperationException("Hash table is full.");
         }
 
+        /// <summary>
+        /// Doubles the table size and rehashes all active entries.
+        /// Called when load factor is exceeded.
+        /// </summary>
         private void Resize()
         {
             var oldTable = this.table;
@@ -110,6 +136,9 @@ namespace HashTableOpenAddressing
             }
         }
 
+        /// <summary>
+        /// Checks whether a key exists in the table.
+        /// </summary>
         public bool ContainsKey(TKey key)
         {
             if (key == null)
@@ -130,6 +159,10 @@ namespace HashTableOpenAddressing
             return false;
         }
 
+        /// <summary>
+        /// Retrieves the value associated with a key.
+        /// Throws KeyNotFoundException if the key does not exist.
+        /// </summary>
         public TValue Get(TKey key)
         {
             if (key == null)
@@ -150,6 +183,9 @@ namespace HashTableOpenAddressing
             throw new KeyNotFoundException("Key not found.");
         }
 
+        /// <summary>
+        /// Removes a key-value pair from the table by marking the slot as a tombstone.
+        /// </summary>
         public void Remove(TKey key)
         {
             if (key == null)

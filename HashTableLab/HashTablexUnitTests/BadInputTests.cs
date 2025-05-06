@@ -10,6 +10,9 @@ namespace HashTablexUnitTests
     public class BadInputTests
     {
         [Fact]
+        /// <summary>
+        /// Ensures that attempting to retrieve a non-existing key throws a KeyNotFoundException.
+        /// </summary>
         public void Get_NonExistingKey_ShouldThrowKeyNotFoundException()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -18,6 +21,9 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Ensures that attempting to retrieve a non-existing key throws a KeyNotFoundException.
+        /// </summary>
         public void Remove_NonExistingKey_ShouldThrowKeyNotFoundException()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -26,6 +32,9 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Verifies that adding a null key throws an ArgumentNullException.
+        /// </summary>
         public void Add_NullKey_ShouldThrowException()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -34,6 +43,9 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Ensures that checking for a null key throws an ArgumentNullException.
+        /// </summary>
         public void ContainsKey_NullKey_ShouldThrowException()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -42,6 +54,10 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Tests that multiple keys that hash to the same index are correctly handled by the linked list.
+        /// This simulates collisions by setting the table size to 1.
+        /// </summary>
         public void Add_Keys_ThatCauseCollision_ShouldHandleViaLinkedList()
         {
             var table = new LinkedListHashTable<int, string>(1);

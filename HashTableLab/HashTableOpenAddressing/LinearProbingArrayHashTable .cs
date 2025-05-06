@@ -4,15 +4,26 @@ using HashTableChaining;
 
 namespace HashTableOpenAddressing
 {
+    /// <summary>
+    /// A hash table using linear probing for collision resolution.
+    /// Entries are stored in a fixed-size array, and probing is done by linearly scanning the table.
+    /// </summary>
+    /// <typeparam name="TKey">The type of the keys in the hash table.</typeparam>
+    /// <typeparam name="TValue">The type of the values in the hash table.</typeparam>
     public class LinearProbingArrayHashTable<TKey, TValue> : IHashTable<TKey, TValue>
     {
         private HashEntry<TKey, TValue>[] table;
         private int capacity;
         private int size;
         private const double LoadFactor = 0.6;
+        // A special marker used to indicate a removed entry
         private readonly HashEntry<TKey, TValue> Tombstone = new HashEntry<TKey, TValue>(default, default);
-        private readonly Func<string, int> hashFunction;  // Added hash function
+        // Hash function that accepts string representation of keys
+        private readonly Func<string, int> hashFunction;
 
+        /// <summary>
+        /// Internal entry class for storing key-value pairs.
+        /// </summary>
         public class HashEntry<TKey, TValue>
         {
             public TKey Key { get; set; }
@@ -24,7 +35,9 @@ namespace HashTableOpenAddressing
             }
         }
 
-        // Constructor now accepts an optional hash function parameter
+        /// <summary>
+        /// Initializes the hash table with an optional hash function and initial capacity.
+        /// </summary>
         public LinearProbingArrayHashTable(int initialCapacity = 16, Func<string, int> hashFunction = null)
         {
             this.capacity = initialCapacity;
@@ -34,27 +47,41 @@ namespace HashTableOpenAddressing
             this.hashFunction = hashFunction ?? DefaultHash;
         }
 
+        /// <summary>
+        /// Default hash function used if none is provided. Uses SimpleMurmurHash.
+        /// </summary>
         private int DefaultHash(string key)
         {
             return Math.Abs(HashFunctions.SimpleMurmurHash(key)) % this.capacity;
         }
 
-        // Use this.hashFunction here instead of hardcoding the hash function
+        /// <summary>
+        /// Gets the base hash index for a key.
+        /// </summary>
         private int GetHash(TKey key)
         {
             return this.hashFunction(key.ToString());
         }
 
+        /// <summary>
+        /// Computes the probe index using linear probing: hash + i (mod capacity).
+        /// </summary>
         private int Hash(TKey key, int i)
         {
             return (this.GetHash(key) + i) % this.capacity;
         }
 
+        /// <summary>
+        /// Adds a new key-value pair to the table.
+        /// If the key already exists, throws an exception.
+        /// Uses tombstone slots if available.
+        /// </summary>
         public void Add(TKey key, TValue value)
         {
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
+            // Resize if load factor is exceeded
             if ((double)this.size / this.capacity >= LoadFactor)
                 this.Resize();
 
@@ -75,7 +102,7 @@ namespace HashTableOpenAddressing
 
                 if (entry == this.Tombstone && firstTombstone == -1)
                 {
-                    firstTombstone = probeIndex;
+                    firstTombstone = probeIndex; // Store first tombstone found
                 }
                 else if (Equals(entry.Key, key))
                 {
@@ -86,6 +113,10 @@ namespace HashTableOpenAddressing
             throw new InvalidOperationException("Hash table is full.");
         }
 
+        /// <summary>
+        /// Retrieves the value for a given key.
+        /// Throws KeyNotFoundException if not found.
+        /// </summary>
         public TValue Get(TKey key)
         {
             for (int i = 0; i < this.capacity; i++)
@@ -103,6 +134,9 @@ namespace HashTableOpenAddressing
             throw new KeyNotFoundException("Key not found.");
         }
 
+        /// <summary>
+        /// Removes the entry associated with the given key by marking it as a tombstone.
+        /// </summary>
         public void Remove(TKey key)
         {
             for (int i = 0; i < this.capacity; i++)
@@ -122,6 +156,9 @@ namespace HashTableOpenAddressing
             }
         }
 
+        /// <summary>
+        /// Doubles the capacity of the table and rehashes all valid entries.
+        /// </summary>
         private void Resize()
         {
             var oldTable = this.table;
@@ -138,6 +175,9 @@ namespace HashTableOpenAddressing
             }
         }
 
+        /// <summary>
+        /// Returns true if the key exists in the table; otherwise, false.
+        /// </summary>
         public bool ContainsKey(TKey key)
         {
             for (int i = 0; i < this.capacity; i++)

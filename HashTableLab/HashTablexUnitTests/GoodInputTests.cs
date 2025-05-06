@@ -5,6 +5,9 @@ namespace HashTablexUnitTests
     public class GoodInputTests
     {
         [Fact]
+        /// <summary>
+        /// Verifies that a value can be successfully added and retrieved by its key.
+        /// </summary>
         public void Add_And_Get_Value_ShouldSucceed()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -16,6 +19,10 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Tests that adding the same key twice updates its value.
+        /// Ensures linked list implementation supports key replacement.
+        /// </summary>
         public void Add_SameKey_ShouldUpdateValue()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -28,6 +35,9 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Ensures a key can be removed and is no longer retrievable or present in the table.
+        /// </summary>
         public void Remove_Key_ShouldDeleteSuccessfully()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -38,6 +48,9 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Confirms that an existing key is correctly recognized by the ContainsKey method.
+        /// </summary>
         public void ContainsKey_ExistingKey_ShouldReturnTrue()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -47,6 +60,9 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Ensures that a key that was never added returns false in ContainsKey.
+        /// </summary>
         public void ContainsKey_NonExistingKey_ShouldReturnFalse()
         {
             var table = new LinkedListHashTable<string, string>();
@@ -55,6 +71,10 @@ namespace HashTablexUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Adds enough items to trigger the rehash mechanism and ensures all items are still accessible.
+        /// This tests dynamic resizing logic and rehashing correctness.
+        /// </summary>
         public void Add_MultipleItems_ShouldTriggerRehash()
         {
             var table = new LinkedListHashTable<int, string>(4);

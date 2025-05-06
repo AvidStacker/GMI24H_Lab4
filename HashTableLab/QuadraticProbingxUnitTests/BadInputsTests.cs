@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 
 namespace QuadraticProbingxUnitTests
 {
+    /// <summary>
+    /// Unit tests for handling invalid input in QuadraticProbingArrayHashTable.
+    /// These ensure the table handles edge cases and improper usage correctly.
+    /// </summary>
     public class BadInputsTests
     {
         [Fact]
+        /// <summary>
+        /// Ensures that trying to add a null key throws an ArgumentNullException.
+        /// This validates input checking before hashing.
+        /// </summary>
         public void Add_NullKey_ShouldThrow()
         {
             var table = new QuadraticProbingArrayHashTable<string, string>();
@@ -18,6 +26,10 @@ namespace QuadraticProbingxUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Verifies that accessing a non-existent key throws a KeyNotFoundException.
+        /// This ensures safe behavior when calling Get on unknown keys.
+        /// </summary>
         public void Get_NonExistentKey_ShouldThrow()
         {
             var table = new QuadraticProbingArrayHashTable<string, string>();
@@ -26,6 +38,10 @@ namespace QuadraticProbingxUnitTests
         }
 
         [Fact]
+        /// <summary>
+        /// Confirms that adding a key twice results in an ArgumentException.
+        /// This enforces uniqueness of keys and protects internal state.
+        /// </summary>
         public void Add_DuplicateKey_ShouldThrow()
         {
             var table = new QuadraticProbingArrayHashTable<string, int>();
@@ -33,6 +49,5 @@ namespace QuadraticProbingxUnitTests
 
             Assert.Throws<ArgumentException>(() => table.Add("key", 2));
         }
-
     }
 }

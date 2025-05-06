@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HashTableChaining")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+094d93c75c1cc909cde947d289599152e8616a07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10dd7839e84453a78d49eaf2bce05699fa7d2a0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("HashTableChaining")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HashTableChaining")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,7 +10,6 @@ namespace HashTableOpenAddressing
     {
         public static void Main(string[] args)
         {
-            // Your application logic goes here
             Console.WriteLine("Hello, world!");
         }
     }
