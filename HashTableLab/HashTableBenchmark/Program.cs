@@ -6,7 +6,7 @@ using HashTableOpenAddressing;
 
 class Program
 {
-    const int NumItems = 100000;
+    const int NumItems = 1000;
 
     static void Main()
     {

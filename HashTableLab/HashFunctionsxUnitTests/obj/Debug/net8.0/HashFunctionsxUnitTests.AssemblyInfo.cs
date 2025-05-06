@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HashFunctionsxUnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+094d93c75c1cc909cde947d289599152e8616a07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13b1a7c61ff3cae9c74756ce0231783743972790")]
 [assembly: System.Reflection.AssemblyProductAttribute("HashFunctionsxUnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HashFunctionsxUnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

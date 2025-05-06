@@ -18,7 +18,7 @@ namespace QuadraticProbingxUnitTests
         [Fact]
         public void Add_WithCollisions_ShouldProbeCorrectly()
         {
-            var table = new QuadraticProbingHashTable<int, string>(5);
+            var table = new QuadraticProbingArrayHashTable<int, string>(5);
 
             // These are chosen to likely cause collisions
             table.Add(0, "zero");
@@ -33,7 +33,7 @@ namespace QuadraticProbingxUnitTests
         [Fact]
         public void Remove_ThenAddNew_ShouldReuseSlot()
         {
-            var table = new QuadraticProbingHashTable<string, string>(7);
+            var table = new QuadraticProbingArrayHashTable<string, string>(7);
             table.Add("X", "1");
             table.Remove("X");
 

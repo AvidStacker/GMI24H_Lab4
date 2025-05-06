@@ -13,8 +13,8 @@ namespace HashFunctionsxUnitTests
         [Fact]
         public void Djb2_ShouldProduceSameHashForSameInput()
         {
-            int hash1 = HashFunctions.Djb2("test");
-            int hash2 = HashFunctions.Djb2("test");
+            int hash1 = HashFunctions.Djb2Hash("test");
+            int hash2 = HashFunctions.Djb2Hash("test");
 
             Assert.Equal(hash1, hash2);
         }
@@ -40,7 +40,7 @@ namespace HashFunctionsxUnitTests
         [Fact]
         public void HashFunctions_ShouldProduceDifferentHashesForDifferentInputs()
         {
-            int djb2 = HashFunctions.Djb2("a");
+            int djb2 = HashFunctions.Djb2Hash("a");
             int poly = HashFunctions.PolynomialHash("a");
             int murmur = HashFunctions.SimpleMurmurHash("a");
 
